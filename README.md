@@ -9,7 +9,7 @@ The script in this folder is part of the supplementary material for the followin
 ### Goal
 
 - Our goal is to perform differentially private top-k selection of elements in a dataset where records contain users' contributions to elements.
-- To allow selection in practice on real-world systems with massive datasets, the mechanisms evaluated select top-k from the restricted domain of top-<img src="https://render.githubusercontent.com/render/math?math=\bar{k}"> elements, for a given <img src="https://render.githubusercontent.com/render/math?math=\bar{k} \geq k">.
+- To allow selection in practice on real-world systems with massive datasets, the mechanisms evaluated select top-k from the restricted domain of $\text{top-}\bar{k}$ elements, for a given $\bar{k} \geq k$.
 - For the datasets used below, elements will be locations/venues. In this context, each user may contribute a value of 1 if the location was ever visited (irrespective of how many times) and 0 if the user never visited the location.
 - Therefore, we aim to select the top-k most visited locations without compromising the privacy of users.
 
@@ -37,7 +37,7 @@ Datasets need to be downloaded to run the experiments, as follows:
   - **RestrictedGumbel (RG)**: novel mechanism from the framework proposed in our paper.
   - **LimitDomain (LD)**: algorithm from [Durfee and Rogers, '19](https://arxiv.org/pdf/1905.04273.pdf).
 - These two mechanisms consider a **user may contribute to an <u>unknown</u> number of elements**.
-- We experiment various settings of privacy budget, such that each individual execution of a mechanism has overall privacy guarantee as (<img src="https://render.githubusercontent.com/render/math?math=\varepsilon_{total},\,\delta_{total}">)-DP.
+- We experiment various settings of privacy budget, such that each individual execution of a mechanism has overall privacy guarantee as $(\varepsilon_{total}\, \delta_{total})$-DP.
 
 ---
 
